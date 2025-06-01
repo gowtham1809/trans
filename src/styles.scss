@@ -1,0 +1,218 @@
+$primary-color: #e587ed;
+$secondary-color: #dc3545;
+$background-color: #181c24;
+$input-border: #ccc;
+$input-radius: 8px;
+$button-radius: 6px;
+$font-main: cursive;
+$white: white;
+$shadow: 2px 2px 2px #616161;
+$shadow-pink: 2px 2px 2px #cf27e2;
+
+.app-container {
+  .wrapper {
+    background: $background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .globe-bg {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      width: 450px;
+      height: 450px;
+      position: relative;
+    }
+
+
+    .main-content {
+      position: relative;
+      z-index: 1;
+      width: 60%;
+      margin: auto;
+    }
+  }
+}
+
+input {
+  margin: 8px 0;
+  padding: 10px 15px;
+  border: 1px solid $input-border;
+  border-radius: $input-radius;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+
+  &:focus {
+    border-color: $primary-color;
+    box-shadow: 0 0 5px rgba(208, 4, 215, 0.5);
+  }
+}
+
+.buttons {
+  button {
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: $button-radius;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+
+    &.find:hover {
+      background-color: #007bff;
+      color: $white;
+      transform: scale(1.05);
+    }
+    &.clear:hover {
+      background-color: $secondary-color;
+      color: $white;
+      transform: scale(1.05);
+    }
+  }
+}
+
+label {
+  font-weight: 700;
+  color: $white !important;
+}
+
+.title {
+  margin-top: 10px;
+}
+
+.field {
+  h1 {
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: $shadow;
+    color: $white !important;
+  }
+  label {
+    display: block;
+  }
+  div {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+  font-family: $font-main;
+  color: $white !important;
+}
+
+.opts {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.opt {
+  margin: 3px 5px;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  padding: 1px 3px;
+  cursor: pointer;
+
+  &.selected {
+    background-color: #f3fadc;
+    color: black;
+  }
+}
+
+.translate {
+  z-index: 20;
+  position: relative;
+
+  h1 {
+    position: relative;
+    text-shadow: $shadow-pink;
+    text-align: center;
+    background-color: #e3e5dc;
+    padding: 20px;
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    color: black;
+  }
+}
+
+.blob {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+}
+
+@media (width<1024px) {
+  .wrapper {
+    margin: 10px 10%;
+  }
+  .field h1 {
+    font-size: 40px;
+  }
+}
+
+@media (width<768px) {
+  .wrapper {
+    margin: 10px 5%;
+  }
+  input {
+    width: 95%;
+    font-size: 15px;
+  }
+  .buttons {
+    font-size: 15px;
+    display: flex;
+    button {
+      width: 100%;
+    }
+  }
+  .field h1 {
+    font-size: 36px;
+  }
+  .field .input-container {
+    flex-direction: column;
+    gap: 0;
+  }
+  .translate h1 {
+    font-size: 24px;
+    padding: 15px;
+  }
+}
+
+@media (width<480px) {
+  .wrapper {
+    margin: 10px 2%;
+  }
+  input {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  .opts {
+    margin-left: 0;
+  }
+  .opt {
+    display: inline-block;
+    margin: 3px 2px;
+  }
+  .field h1 {
+    font-size: 28px;
+  }
+  .translate h1 {
+    font-size: 20px;
+    padding: 10px;
+  }
+}
