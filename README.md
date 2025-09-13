@@ -2,6 +2,8 @@
 
 A modern React application for translating and transliterating text between English and multiple Indian languages. Features a beautiful animated globe (using [Cobe](https://github.com/shuding/cobe)), a custom animated particles background, and a clean, responsive UI styled with SCSS.
 
+The app will be available at [https://trans-amber.vercel.app/](https://trans-amber.vercel.app/).
+
 ---
 
 ## Features
@@ -93,12 +95,6 @@ This project is for educational/demo purposes. See individual package licenses f
 - [Cobe](https://github.com/shuding/cobe) for the globe visualization
 - [MyMemory API](https://mymemory.translated.net/doc/spec.php) for translations
 - [transliteration](https://github.com/dzcpy/transliteration) for script conversion
-
----
-
-## Screenshots
-
-![App Screenshot](public/logo192.png)
 
 ---
 
